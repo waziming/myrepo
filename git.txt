@@ -1,0 +1,67 @@
+git config --global user.name "Kade For" 
+git config --global user.email kadefor@gmail.com
+
+
+1.
+
+git clone http://192.168.50.8/app01 /tmp/app03
+cd /tmp/app03
+git log
+git add .
+
+git status
+git checkout -- hello.sh
+git commit -am "xxxx"
+
+git reset 411abdbda9 -- hello.sh
+git checkout -- hello.sh
+git commit -am "xxxx"
+
+git reset --hard 411abdbda9
+
+
+git reset --help
+
+
+删除untracked files:
+
+git clean -f
+git clean -f -d
+
+
+2. 分支
+
+查看所有分支及当前分支:
+git branch
+
+创建分支并切换到dev分支:
+git branch dev
+
+git checkout dev
+git checkout master
+
+创建分支并切换到dev分支:
+git checkout -b dev
+
+合并到master分支:
+git checkout master
+git merge dev
+
+删除分支:
+git branch -d dev
+
+
+
+3. 远程 git repo
+
+
+
+
+
+
+git init --bare .
+git update-server-info
+
+
+git clone ..
+git push origin master
